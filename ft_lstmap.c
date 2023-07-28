@@ -6,7 +6,7 @@
 /*   By: pamone <pamone@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/20 13:57:00 by pamone            #+#    #+#             */
-/*   Updated: 2023/07/21 18:21:09 by pamone           ###   ########.fr       */
+/*   Updated: 2023/07/28 20:24:51 by pamone           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		new_node = ft_lstnew(new_data);
 		if (new_node == NULL)
 		{
+			del(new_data);
 			ft_lstclear(&new_list, del);
 			return (NULL);
 		}

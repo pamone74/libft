@@ -6,7 +6,7 @@
 /*   By: pamone <pamone@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 20:28:14 by pamone            #+#    #+#             */
-/*   Updated: 2023/07/21 18:25:41 by pamone           ###   ########.fr       */
+/*   Updated: 2023/07/27 20:42:47 by pamone           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,3 +35,8 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 	temp[i] = '\0';
 	return (temp);
 }
+// int main()
+// {
+// 	char s[] = "Amone Patrick";
+// 	printf("%s",ft_substr(s, 11, 5));
+// }

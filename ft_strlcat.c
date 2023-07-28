@@ -6,13 +6,13 @@
 /*   By: pamone <pamone@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 18:15:55 by pamone            #+#    #+#             */
-/*   Updated: 2023/07/26 14:41:37 by pamone           ###   ########.fr       */
+/*   Updated: 2023/07/28 21:35:33 by pamone           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	len;
 	size_t	counter;

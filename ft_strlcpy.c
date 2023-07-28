@@ -6,7 +6,7 @@
 /*   By: pamone <pamone@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 18:08:06 by pamone            #+#    #+#             */
-/*   Updated: 2023/07/22 01:28:46 by pamone           ###   ########.fr       */
+/*   Updated: 2023/07/28 21:04:31 by pamone           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,14 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 		src_len++;
 	if (size == 0)
 		return (src_len);
-	while (i < size - 1 && buffer_src[i] != '\0')
+	if (size > 0)
 	{
-		dest[i] = buffer_src[i];
-		i++;
+		while (i < size - 1 && buffer_src[i] != '\0')
+		{
+			dest[i] = buffer_src[i];
+			i++;
+		}
+		dest[i] = '\0';
 	}
-	dest[i] = '\0';
 	return (src_len);
 }

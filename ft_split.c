@@ -6,7 +6,7 @@
 /*   By: pamone <pamone@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/13 16:58:59 by pamone            #+#    #+#             */
-/*   Updated: 2023/07/22 00:08:46 by pamone           ###   ########.fr       */
+/*   Updated: 2023/07/27 19:32:24 by pamone           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,6 @@ static void	free_split(char **split)
 	}
 	free (split);
 }
-
 /**
  * is_string is a flag used to see if the pointer of
  * the string is being counted or not.
@@ -65,6 +64,7 @@ static void	free_split(char **split)
  * for example "42 Abu Dhabi" will return 3,
  * because there are three substrings.
 */
+
 static size_t	count_substrings(const char *s, char c)
 {
 	size_t	count;
@@ -134,3 +134,14 @@ char	**ft_split(char const *s, char c)
 	split[i] = NULL;
 	return (split);
 }
+
+// int main()
+// {
+// 	int i = 0;
+// 	char **str = ft_split("42 Abu dhabi", ' ');
+// 	while(str[i] != NULL)
+// 	{	
+// 		printf("The returned string value is %s\n", str[i]);
+// 		i++;
+// 	}
+// }

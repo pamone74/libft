@@ -6,7 +6,7 @@
 /*   By: pamone <pamone@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/13 15:15:52 by pamone            #+#    #+#             */
-/*   Updated: 2023/07/21 18:24:26 by pamone           ###   ########.fr       */
+/*   Updated: 2023/07/27 19:41:28 by pamone           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	if (s1 == NULL || s2 == NULL)
 		return (NULL);
-	s1_len = 0;
-	s2_len = 0;
-	while (s1[s1_len] != '\0')
-		s1_len++;
-	while (s2[s2_len] != '\0')
-		s2_len++;
+	s1_len = ft_strlen(s1);
+	s2_len = ft_strlen(s2);
 	temp = (char *)malloc(sizeof(char) * (s1_len + s2_len + 1));
 	if (temp == NULL)
 		return (NULL);
@@ -38,3 +34,9 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	*temp = '\0';
 	return (temp_start);
 }
+// int main()
+// {
+// 	char s[] = "42";
+// 	char d[] = "Abu dhabi";
+// 	printf("%s",ft_strjoin(s, d));
+// }

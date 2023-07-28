@@ -6,7 +6,7 @@
 /*   By: pamone <pamone@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 18:19:11 by pamone            #+#    #+#             */
-/*   Updated: 2023/07/21 18:25:25 by pamone           ###   ########.fr       */
+/*   Updated: 2023/07/28 20:06:16 by pamone           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,18 @@
 
 char	*ft_strrchr(const char *str, int c)
 {
-	char	*ch;
+	unsigned char	*ch;
+	unsigned char	target;
 
 	ch = NULL;
-	if (c == '\0')
+	target = (unsigned char)c;
+	if (target == '\0')
 		return ((char *)str + ft_strlen(str));
 	while (*str)
 	{
-		if (*str == (char)c)
-			ch = (char *)str;
+		if (*str == target)
+			ch = (unsigned char *)str;
 		str++;
 	}
-	return (ch);
+	return ((char *)ch);
 }
