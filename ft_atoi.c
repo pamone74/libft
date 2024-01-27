@@ -60,3 +60,37 @@ int	ft_atoi(const char *str)
 	}
 	return (sign * result);
 }
+
+
+
+/*
+This Atoi is modified to handle the int overflow by retunrning -1 and 1
+
+*/
+
+
+int	ft_atoi_handle_overflow(const char *str)
+{
+	int	sign;
+	long long	result;
+	int	digit;
+
+	result = 0;
+	sign = ft_sign(&str);
+	while (*str && (*str >= '0' && *str <= '9'))
+	{
+		digit = *str - '0';
+		if (result > LLONG_MAX / 10 || (result == LLONG_MAX / 10 && 
+				digit > LLONG_MAX % 10))
+		{
+			if (sign == 1 || sign == -1)
+			{
+				ft_pustr("Invalid Input");
+				exit(EXIT_FAILURE);
+			}
+		}
+		result = result * 10 + digit;
+		str++;
+	}
+	return (sign * result);
+}
